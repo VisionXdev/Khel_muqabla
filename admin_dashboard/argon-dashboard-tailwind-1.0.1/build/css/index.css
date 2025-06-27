@@ -1,0 +1,328 @@
+@keyframes brandFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-brandFade {
+    animation: brandFade 0.8s ease-in-out both;
+}
+
+#logo-wrapper {
+    position: relative;
+}
+
+.logo-img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.logo-img:hover {
+    filter: brightness(1.2);
+    transform: scale(1.1) rotateX(12deg) rotate(3deg) translateY(-2px);
+    transition: transform 0.4s ease;
+}
+
+.logo-text {
+    display: inline-block;
+    transition: all 0.4s ease-in-out;
+}
+
+.logo-link:hover .logo-text {
+    transform: translateY(-2px);
+    letter-spacing: 0.5px;
+    color: #ff7657;
+}
+
+/* GAME */
+
+.game-upload-section {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+/* ALL UPLOADED GAME */
+
+/* text css */
+
+.game_uploaded {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+
+.heading-game {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #1f1f2e;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.heading-game::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #ff7657;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.heading-game:hover::after {
+    width: 90px;
+}
+
+
+/* Cards section */
+.games-section {
+    padding: 40px 20px;
+}
+
+
+.game-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.game-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-card:hover {
+    transform: scale(1.02);
+}
+
+/* Game image */
+.game-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+
+.game-info {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    color: #000;
+    padding: 12px;
+    transition: bottom 0.4s ease-in-out;
+    font-size: 14px;
+}
+
+.game-card:hover .game-info {
+    bottom: 0;
+}
+
+/* Game title */
+.game-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+
+/* Game description */
+.game-desc {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+    .game-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .game-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.scale-card {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.modal-content {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    border-radius: 30px;
+}
+
+/* job */
+
+.job-section {
+    margin-top: 10vh;
+}
+
+.section-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1e293b;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.dark .section-heading {
+    color: #ffffff;
+}
+
+.section-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #ff7657;
+    transition: width 0.4s ease;
+}
+
+.section-heading:hover::after {
+    width: 80%;
+}
+
+
+.input-field {
+    @apply w-full px-4 py-2 rounded-md border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#ff7657] transition duration-300;
+}
+
+.btn-primary {
+    @apply bg-[#ff7657] hover:bg-[#e85c45] text-white font-semibold py-2 px-6 rounded-md transition-all duration-300 shadow-md hover:shadow-lg;
+}
+
+.list-item {
+    @apply p-3 bg-white dark:bg-slate-700 rounded-md shadow-sm hover:shadow-md transition-all duration-300;
+}
+
+/*  winner css start*/
+
+/* main cs start */
+
+/* text css */
+
+
+.heading-game {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #1f1f2e;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.heading-game::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #ff7657;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.heading-game:hover::after {
+    width: 90px;
+}
+
+
+/* rank css start */
+
+.rank-section {
+    padding: 50px 20px;
+}
+
+.rank-table-wrapper {
+    overflow-x: auto;
+}
+
+.rank-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.rank-table thead {
+    background-color: #ff7657;
+    color: #fff;
+}
+
+.rank-table th,
+.rank-table td {
+    padding: 16px 20px;
+    text-align: left;
+    transition: background 0.3s ease;
+}
+
+/* Highlight every other row */
+.rank-table tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* Hover effect */
+.rank-table tbody tr:hover {
+    background-color: #eaeaff;
+    transform: scale(1.005);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/* Top 3 Rank Highlight */
+.rank-1 {
+    background-color: #ffe700;
+    font-weight: 700;
+}
+
+.rank-2 {
+    background-color: #c0c0c0;
+    font-weight: 700;
+}
+
+.rank-3 {
+    background-color: #cd7f32;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .rank-table th,
+    .rank-table td {
+        font-size: 14px;
+        padding: 12px;
+    }
+}   

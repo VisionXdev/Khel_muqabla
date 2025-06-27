@@ -1,0 +1,176 @@
+/* === LOGO === */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.sidebar-logo-img {
+  width: 60px;
+  height: auto;
+  animation: logoPop 0.8s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-logo-img:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+/* === SIDEBAR BASE === */
+.sidebar {
+  background: #1f1f2e;
+  color: #ffffff;
+  min-height: 100vh;
+  padding-top: 20px;
+  animation: fadeSlideIn 0.6s ease-out;
+}
+
+/* === SIDEBAR BRAND TEXT === */
+.sidebar-brand {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sidebar-brand:hover {
+  color: #ff7657;
+}
+
+.sidebar-brand-text {
+  font-size: 18px;
+  margin-left: 10px;
+  color: #ffffff;
+}
+
+/* === DIVIDER === */
+.sidebar-divider {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* === NAV ITEMS === */
+.nav-item {
+  list-style: none;
+  animation: slideInItem 0.5s ease-out;
+}
+
+.nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  color: #d1d1e0;
+  padding: 10px 20px;
+  font-size: 15px;
+  transition: background 0.3s, color 0.3s;
+  position: relative;
+}
+
+.nav-item .nav-link:hover {
+  background: #29293d;
+  color: #ff7657;
+  border-left: 3px solid #ff7657;
+}
+
+.nav-item.active .nav-link {
+  background: #29293d;
+  color: #ff7657;
+  border-left: 3px solid #ff7657;
+}
+
+/* Nav link underline hover */
+.nav-item .nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 70%;
+  width: 0;
+  height: 2px;
+  background-color: #ff7657;
+  transition: width 0.3s ease;
+  transform: translateY(-50%);
+}
+
+.nav-item .nav-link:hover::before {
+  width: 100%;
+}
+
+/* === COLLAPSE MENU === */
+.collapse-inner {
+  background-color: #2a2a3b;
+  padding: 10px;
+}
+
+.collapse-header {
+  font-size: 14px;
+  color: #aaaaaa;
+  padding: 4px 15px;
+}
+
+.collapse-item {
+  display: block;
+  color: #c0c0d0;
+  padding: 8px 20px;
+  font-size: 14px;
+  transition: background 0.3s, color 0.3s;
+  text-decoration: none;
+  animation: slideInItem 0.4s ease forwards;
+}
+
+.collapse-item:hover {
+  background: #353546;
+  color: #ff7657;
+}
+
+/* === SIDEBAR CARD === */
+.sidebar-card {
+  background: #29293d;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 16px;
+  color: #ffffff;
+}
+
+.sidebar-card img {
+  max-width: 100%;
+}
+
+.sidebar-card p {
+  font-size: 13px;
+}
+
+.sidebar-card a {
+  margin-top: 8px;
+  background-color: #28a745;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.sidebar-card a:hover {
+  background-color: #218838;
+}
+
+/* === KEYFRAMES === */
+@keyframes fadeSlideIn {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes logoPop {
+  0% { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+@keyframes slideInItem {
+  from { transform: translateX(-10px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}

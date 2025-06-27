@@ -1,0 +1,114 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+/* main cs start */
+
+/* text css */
+
+
+.heading-game {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #1f1f2e;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.heading-game::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #ff7657;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.heading-game:hover::after {
+    width: 90px;
+}
+
+
+/* rank css start */
+
+.rank-section {
+  padding: 50px 20px;
+}
+
+.rank-table-wrapper {
+  overflow-x: auto;
+}
+
+.rank-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.rank-table thead {
+  background-color: #ff7657;
+  color: #fff;
+}
+
+.rank-table th,
+.rank-table td {
+  padding: 16px 20px;
+  text-align: left;
+  transition: background 0.3s ease;
+}
+
+/* Highlight every other row */
+.rank-table tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+/* Hover effect */
+.rank-table tbody tr:hover {
+  background-color: #eaeaff;
+  transform: scale(1.005);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* Top 3 Rank Highlight */
+.rank-1 {
+  background-color: #ffe700;
+  font-weight: 700;
+}
+
+.rank-2 {
+  background-color: #c0c0c0;
+  font-weight: 700;
+}
+
+.rank-3 {
+  background-color: #cd7f32;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .rank-table th,
+  .rank-table td {
+    font-size: 14px;
+    padding: 12px;
+  }
+}

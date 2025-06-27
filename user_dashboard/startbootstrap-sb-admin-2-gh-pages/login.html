@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Khel Muqabla</title>
+    <!-- logo on serch bar  -->
+    <link rel="icon" href="../../assets/imgs/logo.png" type="image/png">
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body style="background-color: #ff7657;">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center bg-white">
+                                <img src="../../assets/imgs/login-octo" class="img-fluid"
+                                    style="max-height: 100%; object-fit: contain;" alt="login-image">
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 mb-4" style="color: #ff7657;">Welcome Back!</h1>
+                                    </div>
+                                    <form class="user">
+                                        <div class="form-group">
+                                            <input type="email"
+                                                class="form-control form-control-user border-0 shadow-sm"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Enter Email Address...">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password"
+                                                class="form-control form-control-user border-0 shadow-sm"
+                                                id="exampleInputPassword" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <label class="custom-control-label" for="customCheck">Remember
+                                                    Me</label>
+                                            </div>
+                                        </div>
+                                        <a href="index.html" class="btn btn-user btn-block text-white"
+                                            style="background-color: #ff7657;">
+                                            Login
+                                        </a>
+                                        <hr>
+                                        <button id="googleLogin" class="btn btn-block text-white"
+                                            style="background-color: #e75645;">
+                                            <i class="fab fa-google fa-fw"></i> Login with Google
+                                        </button>
+                                    </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="forgot-password.html" style="color: #e75645;">Forgot
+                                            Password?</a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="small" href="register.html" style="color: #e75645;">Create an
+                                            Account!</a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="small"
+                                            href="../../admin_dashboard/argon-dashboard-tailwind-1.0.1/build/pages/sign-in.html"
+                                            style="color: #e75645;">Admin (Just for testing)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Firebase App (Core) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script>
+        const auth = firebase.auth();
+        const provider = new firebase.auth.GoogleAuthProvider();
+
+        document.getElementById('googleLogin').addEventListener('click', () => {
+            auth.signInWithPopup(provider)
+                .then(result => {
+                    const user = result.user;
+                    alert("Welcome, " + user.displayName);
+                })
+                .catch(error => {
+                    console.error("Error during Google login:", error.message);
+                });
+        });
+    </script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+
+
+</html>
