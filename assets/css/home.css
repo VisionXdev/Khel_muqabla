@@ -1276,6 +1276,11 @@ body {
   user-select: none;
 }
 
+.footer-bottom .social-icon {
+  color: white;
+}
+
+
 /* Responsive Styles */
 
 @media (max-width: 768px) {

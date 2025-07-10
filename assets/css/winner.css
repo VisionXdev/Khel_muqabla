@@ -325,6 +325,15 @@ body {
   margin: 60px auto;
 }
 
+.zoom-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom-img:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
 
 .section-heading {
   font-size: 2rem;
@@ -562,6 +571,7 @@ body {
   width: 100%;
 }
 
+
 /* Footer bottom */
 
 .footer-bottom {
@@ -598,6 +608,10 @@ body {
 .footer-bottom p {
   margin: 0;
   user-select: none;
+}
+
+.footer-bottom .social-icon {
+  color: white;
 }
 
 /* Responsive Styles */

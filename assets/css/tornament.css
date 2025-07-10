@@ -311,9 +311,31 @@ body {
 /* main page css start */
 
 
-/* Landing Section */
+/* Background Image Section */
+.section-bg {
+    /* background-image: url(../imgs/Vector-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 2; */
+}
+
+/* Optional Overlay (if text is hard to read) */
+.section-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    /* light overlay */
+    z-index: 0;
+}
 
 .landing-section {
+    position: relative;
     margin-top: 100px;
     width: 100vw;
     padding: 40px 10px 15vh;
@@ -322,6 +344,7 @@ body {
     align-items: center;
     overflow: hidden;
     background-color: #fff;
+    z-index: 1;
 }
 
 .content-wrapper {
@@ -332,7 +355,7 @@ body {
     width: 90vw;
     max-width: 1300px;
     animation: contentRise 0.9s ease-in-out forwards;
-    z-index: 1;
+
 }
 
 .text-container {
@@ -446,22 +469,19 @@ body {
     .tournament-image {
         width: 140px;
     }
+
+    .text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 /* Animations */
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(2vh);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @keyframes contentRise {
     from {
         opacity: 0;
@@ -485,6 +505,8 @@ body {
         box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
     }
 }
+
+/* Main Page CSS END */
 
 /* Smartron Section */
 
@@ -678,7 +700,7 @@ body {
         font-size: 14px;
     }
 
-    .code-wave-img-warap{
+    .code-wave-img-warap {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -819,6 +841,10 @@ body {
 .footer-bottom p {
     margin: 0;
     user-select: none;
+}
+
+.footer-bottom .social-icon {
+    color: white;
 }
 
 /* Responsive Styles */
