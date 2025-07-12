@@ -1,4 +1,14 @@
-/* css start */
+
+:root {
+    --primary-color: #e75645;
+    --secondary-color: #ff7657;
+    --accent-color: #dc3545;
+    --whatsapp-color: #25d366;
+    --footer-bg: #111;
+    --footer-link-hover: var(--secondary-color);
+    --text-color: #333;
+    --background-color: #fff;
+}
 
 * {
     margin: 0px;
@@ -16,7 +26,7 @@ body {
 /* NAV-SOCAIL AND DASHBOARD */
 
 #nav-link {
-    background: #fff;
+    background: var(--background-color);
     padding: 0;
     margin: 0;
 }
@@ -52,7 +62,7 @@ body {
 }
 
 .social-icon:hover {
-    color: #ff7657;
+    color: var(--secondary-color);
     transform: scale(1.5) rotate(10deg);
 }
 
@@ -61,7 +71,7 @@ body {
     position: relative;
     display: inline-block;
     padding: 10px 24px;
-    border: 2px solid #e75645;
+    border: 2px solid var(--primary-color);
     border-radius: 34px;
     background-color: transparent;
     cursor: pointer;
@@ -72,7 +82,7 @@ body {
 }
 
 .button-link {
-    color: #e75645;
+    color: var(--primary-color);
     text-decoration: none;
     position: relative;
     z-index: 1;
@@ -84,7 +94,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: #e75645;
+    background-color: var(--primary-color);
     border-radius: inherit;
     transform: scale(0);
     transition: transform 0.5s ease;
@@ -96,7 +106,7 @@ body {
 }
 
 .button:hover .button-link {
-    color: #ffffff;
+    color: var(--background-color);
 }
 
 .button:hover {
@@ -140,7 +150,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 999;
-    background-color: #fff;
+    background-color: var(--background-color);
     padding: 12px 0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
@@ -186,7 +196,7 @@ body {
     display: inline-block;
     font-size: 16px;
     font-weight: 500;
-    color: #333;
+    color: var(--text-color);
     text-decoration: none;
     padding: 8px 12px;
     transition: color 0.3s ease;
@@ -199,12 +209,12 @@ body {
     bottom: -4px;
     height: 2px;
     width: 0%;
-    background: orange;
+    background: var(--footer-link-hover);
     transition: width 0.3s ease;
 }
 
 .nav-a:hover {
-    color: orange;
+    color: var(--footer-link-hover);
 }
 
 .nav-a:hover::after {
@@ -223,7 +233,7 @@ body {
 
 .bar {
     height: 3px;
-    background: #333;
+    background: var(--text-color);
     border-radius: 2px;
     transition: all 0.4s ease;
 }
@@ -313,7 +323,7 @@ body {
 /*  Careers Section Wrapper */
 .careers-section {
     padding: 40px 20px;
-    background-color: #fff;
+    background-color: var(--background-color);
 }
 
 .career-wrapper {
@@ -337,7 +347,7 @@ body {
 
 .career-heading {
     font-size: 32px;
-    color: #dc3545;
+    color: var(--primary-color);
     margin: 0;
     position: relative;
     cursor: pointer;
@@ -351,7 +361,7 @@ body {
     bottom: -4px;
     height: 2px;
     width: 0;
-    background-color: #dc3545;
+    background-color: var(--primary-color);
     transition: width 0.3s ease;
 }
 
@@ -361,8 +371,8 @@ body {
 
 .career-whatsapp-btn {
     padding: 10px 18px;
-    background-color: #25d366;
-    color: white;
+    background-color: var(--whatsapp-color);
+    color: var(--whatsapp-text-color);
     text-decoration: none;
     font-size: 14px;
     border-radius: 6px;
@@ -377,7 +387,7 @@ body {
 /*  Subheading */
 .career-subheading {
     font-size: 16px;
-    color: #666;
+    color: var(--text-color);
     text-align: center;
     margin-bottom: 30px;
 }
@@ -389,7 +399,7 @@ body {
     border-collapse: collapse;
     border-radius: 12px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: var(--background-color);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
     animation: fadeUp 0.7s ease-in;
 }
@@ -411,25 +421,25 @@ body {
     padding: 16px;
     text-align: center;
     font-size: 15px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-color);
     transition: all 0.3s ease;
 }
 
 .career-table thead th {
-    background-color: #f8f9fa;
+    background-color: var(--table-header-background);
     color: #343a40;
     font-weight: 600;
 }
 
 .career-table tbody tr:hover {
-    background-color: #fdfdfd;
+    background-color: var(--table-row-hover-background);
     transform: scale(1.005);
 }
 
 
 /*  Application Form */
 .career-form {
-    background-color: #fff;
+    background-color: var(--background-color);
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -456,7 +466,7 @@ body {
     width: 100%;
     padding: 10px;
     font-size: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--primary-color);
     border-radius: 4px;
     transition: border 0.3s;
 }
@@ -464,7 +474,7 @@ body {
 .form-input:hover,
 .form-textarea:hover,
 .form-select:hover {
-    border-color: #ff7657;
+    border-color: var(--footer-link-hover);
 }
 
 
@@ -472,11 +482,11 @@ body {
 .form-dropzone {
     display: block;
     padding: 25px;
-    border: 2px dashed #aaa;
+    border: 2px dashed var(--border-color);
     border-radius: 6px;
     text-align: center;
-    color: #777;
-    background-color: #f9f9f9;
+    color: var(--text-color);
+    background-color: var(--background-color);
     cursor: pointer;
     transition: background 0.3s, border 0.3s;
     font-size: 15px;
@@ -485,9 +495,9 @@ body {
 }
 
 .form-dropzone:hover {
-    background-color: #fff;
-    border-color: #ff7657;
-    color: #444;
+    background-color: var(--background-color);
+    border-color: var(--footer-link-hover);
+    color: var(--text-color);
 }
 
 .form-file {
@@ -505,8 +515,8 @@ body {
 .form-btn {
     display: inline-block;
     padding: 12px 25px;
-    background-color: #dc3545;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
     font-size: 16px;
     border: none;
     border-radius: 5px;
@@ -515,7 +525,7 @@ body {
 }
 
 .form-btn:hover {
-    background-color: #c82333;
+    background-color: var(--primary-hover-color);
 }
 
 
@@ -554,7 +564,7 @@ body {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #25d366;
+    background-color: var(--whatsapp-color);
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -568,11 +578,11 @@ body {
 }
 
 .whatsapp-button:hover {
-    background-color: #1ebe57;
+    background-color: var(--whatsapp-hover-color);
 }
 
 .whatsapp-button i {
-    color: white;
+    color: var(--whatsapp-text-color);
 }
 
 /* main css end  */
@@ -580,8 +590,8 @@ body {
 /*  FOOTER START  */
 
 .footer {
-    background-color: #111;
-    color: white;
+    background-color: var(--footer-bg);
+    color: var(--background-color);
     padding: 40px 20px;
     font-family: sans-serif;
     text-align: center;
@@ -624,7 +634,7 @@ body {
 }
 
 .footer-p:hover {
-    color: #e75645;
+    color: var(--footer-link-hover);
 }
 
 /* Footer links */
@@ -643,13 +653,13 @@ body {
 
 .footer-link {
     text-decoration: none;
-    color: #ddd;
+    color: var(--footer-text-color);
     transition: color 0.3s ease, transform 0.3s ease;
     position: relative;
 }
 
 .footer-link:hover {
-    color: #ff7657;
+    color: var(--footer-link-hover);
     transform: translateX(5px);
 }
 
@@ -660,7 +670,7 @@ body {
     height: 2px;
     bottom: -3px;
     left: 0;
-    background-color: #ff7657;
+    background-color: var(--footer-link-hover);
     transition: width 0.3s ease;
 }
 
@@ -677,11 +687,11 @@ body {
     flex-wrap: wrap;
     gap: 10px;
     font-size: 12px;
-    color: #aaa;
+    color: var(--footer-text-color);
     text-align: center;
     margin-top: 20px;
     padding-top: 10px;
-    border-top: 1px solid #333;
+    border-top: 1px solid var(--border-color);
 }
 
 .socail-ID {
@@ -691,13 +701,13 @@ body {
 }
 
 .socail-ID a {
-    color: white;
+    color: var(--footer-text-color);
     font-size: 22px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .socail-ID a:hover {
-    color: #ff7657;
+    color: var(--footer-link-hover);
     transform: scale(1.2);
 }
 
@@ -707,7 +717,7 @@ body {
 }
 
 .footer-bottom .social-icon {
-  color: white;
+  color: var(--footer-text-color);
 }
 
 /* Responsive Styles */
